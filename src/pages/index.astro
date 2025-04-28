@@ -1,0 +1,276 @@
+---
+import img1 from "../assets/img1.webp";
+import img2 from "../assets/img2.webp";
+import img3 from "../assets/img3.webp";
+import photo1 from "../assets/photo-1.webp";
+import photo2 from "../assets/photo-2.webp";
+import photo3 from "../assets/photo-3.webp";
+import photo4 from "../assets/photo-4.webp";
+import photo5 from "../assets/photo-5.webp";
+import photo6 from "../assets/photo-6.webp";
+import photo7 from "../assets/photo-7.webp";
+import Form from "../components/form.astro";
+import { Image } from "astro:assets";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+---
+
+<MainLayout title="Michelle Young - Photographer & Film Maker">
+  <section aria-labelledby="titleSection1" class="bg-primary" id="section1">
+    <div class="wrapper-contents home flex-between-center gap-4">
+      <article class="grid gap-2">
+        <h1 id="titleSection1" class="h2">
+          Make memories last a lifetime <br />
+          Not let your memories <br /> Passing away
+        </h1>
+        <p>
+          Immortalize ordinary moments into extraordinary memories
+          <br />
+          Transforming them into timeless works of art.
+        </p>
+        <a class="btn btn-accent" href="#">Hire Me</a>
+      </article>
+      <Image src={img1} alt="Michelle Young" class="img home__img" />
+    </div>
+  </section>
+  <section aria-labelledby="titleSection2" id="section2">
+    <div
+      class="wrapper-contents about flex-between-start gap-4 wrapper-article"
+    >
+      <Image src={img2} alt="Michelle Young" class="img about__img" />
+      <article class="about__article grid gap-base">
+        <h2 id="titleSection2">About Me</h2>
+        <p>
+          Hi, I'm Michelle Young, a passionate Photographer and Filmmaker
+          dedicated to capturing moments that tell stories. I specialize in
+          creating stunning visuals that resonate emotionally and creatively.
+          <br />
+          Whether it's through the lens of a camera or the framing of a cinematic
+          shot, I strive to bring authenticity and artistry to every project.
+        </p>
+        <a class="btn btn-accent" href="#">View My Work</a>
+      </article>
+    </div>
+  </section>
+  <section aria-labelledby="titleSection3" id="section3">
+    <div class="wrapper-contents portfolio grid gap-4">
+      <h2 id="titleSection3">Portfolio</h2>
+      <section aria-labelledby="titleSection3" class="portfolio__gallery">
+        <figure>
+          <Image
+            src={photo1}
+            alt="portfolio image"
+            class="img portfolio__img"
+          />
+          <figcaption>Image by : 8verthing - unsplash.com</figcaption>
+        </figure>
+        <figure>
+          <Image
+            src={photo3}
+            alt="portfolio image"
+            class="img portfolio__img"
+          />
+          <figcaption>Image by : 8verthing - unsplash.com</figcaption>
+        </figure>
+        <figure>
+          <Image
+            src={photo2}
+            alt="portfolio image"
+            class="img portfolio__img"
+          />
+          <figcaption>Image by : 8verthing - unsplash.com</figcaption>
+        </figure>
+        <figure>
+          <Image
+            src={photo4}
+            alt="portfolio image"
+            class="img portfolio__img"
+          />
+          <figcaption>Image by : 8verthing - unsplash.com</figcaption>
+        </figure>
+        <figure>
+          <Image
+            src={photo5}
+            alt="portfolio image"
+            class="img portfolio__img"
+          />
+          <figcaption>Image by : 8verthing - unsplash.com</figcaption>
+        </figure>
+        <figure>
+          <Image
+            src={photo6}
+            alt="portfolio image"
+            class="img portfolio__img"
+          />
+          <figcaption>Image by : 8verthing - unsplash.com</figcaption>
+        </figure>
+        <figure>
+          <Image
+            src={photo7}
+            alt="portfolio image"
+            class="img portfolio__img"
+          />
+          <figcaption>Image by : 8verthing - unsplash.com</figcaption>
+        </figure>
+      </section>
+    </div>
+  </section>
+  <section aria-labelledby="titleSection4" class="section4" id="section4">
+    <div class="wrapper-contents contact grid gap-4">
+      <div class="contact__heading grid gap-base">
+        <h2 id="titleSection4">Get In Touch</h2>
+        <p>
+          Reach out for inquiries, collaborations,
+          <br />
+          or just to say hello—I'd love to connect with you.
+        </p>
+      </div>
+      <article class="contact__content flex-evenly-center wrap gap-4">
+        <Form />
+        <Image src={img3} alt="Michelle Young" class="img contact__img" />
+      </article>
+      <article class="contact__media flex-between-start wrap gap-2">
+        <div class="grid gap-base">
+          <h3 class="h4">Where's My Office?</h3>
+          <address>
+            88th Street, Somewhere in Zhengzhou,
+            <br />
+            Henan, 484848.
+            <br />
+            &#x260E; 123-456-7890
+          </address>
+        </div>
+        <div class="grid gap-base">
+          <h3 class="h4 text-center">My Social Links</h3>
+          <ul class="contact__media flex-between-center wrap gap-2">
+            <li><a href="#" class="link">Linkedin</a></li>
+            <li><a href="#" class="link">Twitter</a></li>
+            <li><a href="#" class="link">Facebook</a></li>
+            <li><a href="#" class="link">Instagram</a></li>
+            <li><a href="#" class="link">Pinterest</a></li>
+            <li><a href="#" class="link">Youtube</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  h2 {
+    text-decoration: underline 2px var(--accent-color);
+    text-underline-offset: var(--size-small-base);
+  }
+
+  .img {
+    width: clamp(18.75rem, 7.0313rem + 37.5vw, 28.125rem);
+    background-color: var(--gray-200);
+  }
+
+  .home {
+    padding-top: 0;
+  }
+
+  .about__img {
+    padding-right: 5rem;
+  }
+
+  .contact__img {
+    max-width: 25rem;
+  }
+
+  .contact__media .link {
+    font-weight: var(--fw-light);
+  }
+
+  .portfolio__gallery {
+    columns: 3;
+    gap: var(--size-2-base);
+  }
+
+  .portfolio__gallery figure {
+    margin-bottom: var(--size-2-base);
+    border-radius: var(--size-small-base);
+    overflow: hidden;
+  }
+
+  .portfolio__img {
+    transition: var(--transition);
+  }
+
+  .portfolio__img:is(:hover, :focus-visible) {
+    transform: scale(1.05);
+  }
+
+  .portfolio__gallery figcaption {
+    display: none;
+  }
+
+  .section4 {
+    background-color: var(--gray-200);
+    color: var(--dark-base);
+  }
+
+  /* 768px  */
+  @media (max-width: 48em) {
+    .home article {
+      margin-top: calc(var(--size-5-base) * 2);
+    }
+
+    .about__img,
+    .contact__img {
+      max-width: 16.875rem;
+      padding-right: 0;
+    }
+
+    .contact__heading {
+      text-align: center;
+    }
+
+    .contact__content {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact__media .h4 {
+      text-align: center;
+    }
+
+    .contact__media {
+      justify-content: center;
+    }
+  }
+
+  /* 700px  */
+  @media (max-width: 43.75em) {
+    .home,
+    .about,
+    .portfolio,
+    .wrapper-article {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .home article {
+      margin-top: 0;
+      order: 2;
+    }
+
+    .portfolio__gallery {
+      columns: 2;
+    }
+  }
+
+  /* 425px  */
+  @media (max-width: 26.563em) {
+    .img {
+      width: 100%;
+    }
+
+    .portfolio__gallery {
+      columns: 1;
+    }
+  }
+</style>
