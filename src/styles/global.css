@@ -208,7 +208,7 @@ a,
 button,
 .btn {
     font-size: var(--text-size);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
     line-height: normal;
     color: inherit;
     transition: var(--transition);
