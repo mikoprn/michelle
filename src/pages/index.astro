@@ -129,13 +129,12 @@ import "../styles/global.css";
         <Form />
         <Image src={img3} alt="Michelle Young" class="img contact__img" />
       </article>
-      <article class="contact__media flex-between-start wrap gap-2">
+      <article class="contact__social flex-between-start gap-2">
         <div class="grid gap-base">
-          <h3 class="h4">Where's My Office?</h3>
+          <h3 class="h4">My Email</h3>
+          <a href="mailto:#" class="link">michelleyoung@email.com</a>
           <address>
-            88th Street, Somewhere in Earth,
-            <br />
-            Asia, 484848.
+            88th Street, Somewhere in Earth, 484848.
             <br />
             &#x260E; 123-456-7890
           </address>
@@ -175,14 +174,6 @@ import "../styles/global.css";
     padding-right: 5rem;
   }
 
-  .contact__img {
-    max-width: 25rem;
-  }
-
-  .contact__media .link {
-    font-weight: var(--fw-light);
-  }
-
   .portfolio__gallery {
     columns: 3;
     gap: var(--size-2-base);
@@ -211,6 +202,23 @@ import "../styles/global.css";
     color: var(--dark-base);
   }
 
+  .contact__img {
+    max-width: 25rem;
+  }
+
+  .contact__media {
+    max-width: 21.875rem;
+  }
+
+  .contact__media .link {
+    color: inherit;
+    font-weight: var(--fw-light);
+  }
+
+  .contact__media .link:is(:hover, :focus-visible) {
+    color: var(--accent-color);
+  }
+
   /* 768px  */
   @media (max-width: 48em) {
     .home article {
@@ -233,10 +241,6 @@ import "../styles/global.css";
       align-items: center;
     }
 
-    .contact__media .h4 {
-      text-align: center;
-    }
-
     .contact__media {
       justify-content: center;
     }
@@ -244,10 +248,11 @@ import "../styles/global.css";
 
   /* 700px  */
   @media (max-width: 43.75em) {
+    .wrapper-article,
     .home,
     .about,
     .portfolio,
-    .wrapper-article {
+    .contact__social {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -260,6 +265,10 @@ import "../styles/global.css";
 
     .portfolio__gallery {
       columns: 2;
+    }
+
+    .contact__social {
+      text-align: center;
     }
   }
 
