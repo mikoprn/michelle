@@ -27,8 +27,8 @@
       <svg
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
-        width="24px"
-        height="24px"
+        width="26px"
+        height="26px"
         viewBox="0 0 24 24"
         fill="currentColor"
       >
@@ -118,6 +118,10 @@
       background-color: var(--accent-color);
       padding: var(--size-xx-small);
       border-radius: var(--size-xx-small);
+      width: var(--size-3-xl);
+      height: var(--size-3-xl);
+      display: grid;
+      place-items: center;
     }
 
     .nav__mobile-btn svg:first-child {
@@ -169,6 +173,10 @@
       color: var(--light-base);
       padding-block: 1em;
       text-align: center;
+    }
+
+    .nav__link:is(:hover, :focus-visible) {
+      color: inherit;
     }
 
     .nav__menu.active .nav__link {
